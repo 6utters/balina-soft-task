@@ -12,7 +12,9 @@ export const MainLayout: FC<MainLayoutProps> = (props => {
   return (
     <div className={styles.main_layout}>
       <Navbar />
-      {children}
+      <main className={styles.content}>
+        {children}
+      </main>
       <Footer />
     </div>
   )

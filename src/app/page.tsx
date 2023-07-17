@@ -1,7 +1,7 @@
-import './styles/index.scss'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div>Home</div>
+    <Link href={'/films/1'}>To film</Link>
   )
 }

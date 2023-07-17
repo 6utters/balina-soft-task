@@ -3,7 +3,7 @@
 import { FC } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import {navbarLinks} from '../../lib/navbarLinks'
+import { navbarLinks } from '../../lib/navbarLinks'
 import cn from 'classnames'
 import styles from './NavbarLinks.module.scss'
 
@@ -12,10 +12,8 @@ interface NavbarLinksProps {
 }
 
 export const NavbarLinks: FC<NavbarLinksProps> = (props) => {
-  const {className} = props
+  const { className } = props
   const pathname = usePathname()
-
-  console.log('pathname:', pathname)
 
   return (
     <ul className={styles.links}>
