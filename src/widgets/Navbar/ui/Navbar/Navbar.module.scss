@@ -1,0 +1,29 @@
+.wrapper {
+  width: 100%;
+  height: var(--navbar-height);
+
+  .navbar {
+    position: relative;
+    height: 100%;
+    max-width: 1180px;
+    width: 82%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include breakpoint-down(mobile) {
+    background: var(--secondary);
+
+    .navbar {
+      width: 92%;
+      justify-content: center;
+
+      .search {
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+}

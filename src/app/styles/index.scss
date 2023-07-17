@@ -15,6 +15,7 @@ body {
   font-family: "SF Pro Display", sans-serif;
   color: var(--text);
   background: linear-gradient(to top, var(--secondary-dark-pale) 90%, var(--secondary) 100%);
+  min-height: 100vh;
   overflow: auto;
 }
 
