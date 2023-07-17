@@ -1,0 +1,80 @@
+@import "./variables/colors";
+@import "./variables/globals";
+@import "mixins";
+@import "reset";
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  //src: url('../fonts/sf-pro-text-regular.woff') format('woff');
+}
+
+body {
+  font-family: "SF Pro Display", sans-serif;
+  color: var(--text);
+  background: linear-gradient(to top, var(--secondary-dark-pale) 90%, var(--secondary) 100%);
+  overflow: auto;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+h1 {
+  font-size: 37px;
+  font-weight: 700;
+  line-height: 46.41px;
+  letter-spacing: -0.27px;
+
+  @include breakpoint-down(mobile) {
+    font-size: 24px;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.64px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21.48px;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.8px;
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.71px;
+}
+
+h6 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.32px;
+
+  @include breakpoint-down(mobile) {
+    font-size: 14px;
+  }
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -0.12 px;
+
+  @include breakpoint-down(mobile) {
+    font-size: 16px;
+    line-height: 20.8px;
+  }
+}
