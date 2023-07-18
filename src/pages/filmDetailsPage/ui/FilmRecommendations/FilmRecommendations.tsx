@@ -4,17 +4,22 @@ import { RecommendationList } from '@/features/recommendations'
 import styles from './FilmRecommendations.module.scss'
 
 interface FilmRecommendationsProps {
-  films?: Film[]
+  recommendedFilms?: Film[]
 }
 
-export const FilmRecommendations: FC<FilmRecommendationsProps> = memo((props) => {
-  const { films } = props
+export const FilmRecommendations: FC<FilmRecommendationsProps> = (props) => {
+  const { recommendedFilms } = props
+
+    if (!recommendedFilms || recommendedFilms.length == 0) {
+        return null
+    }
+
   return (
     <div className={styles.recommendations_wrapper}>
       <div className={styles.recommendations}>
         <div className={styles.title}><h2>Похожие по жанру</h2></div>
-        <RecommendationList films={films} />
+        <RecommendationList className={styles.recommendations_list} films={recommendedFilms} />
       </div>
     </div>
   )
-})
+}

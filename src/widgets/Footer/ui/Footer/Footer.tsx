@@ -6,7 +6,7 @@ import { SubscriptionCard } from '../SubscriptionCard/SubscriptionCard'
 import { AppLogo } from '@/shared/ui/appLogo/AppLogo'
 import styles from './Footer.module.scss'
 
-export const Footer: FC = memo((props) => {
+export const Footer: FC = memo(() => {
   return (
     <div className={styles.footer_wrapper}>
       <footer className={styles.footer}>

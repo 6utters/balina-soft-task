@@ -4,4 +4,13 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 20px;
+  overflow: hidden;
+
+  @include breakpoint-down(tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include breakpoint-down(mobile) {
+    grid-template-columns: 1fr;
+  }
 }

@@ -3,6 +3,7 @@ import Star from '@/shared/assets/icons/star.svg'
 import { Film } from '@/entities/Film'
 import Image from 'next/image'
 import cn from 'classnames'
+import Link from "next/link";
 import styles from './RecommendationListItem.module.scss'
 
 interface RecommendationListItemProps {
@@ -10,12 +11,13 @@ interface RecommendationListItemProps {
   film: Film
 }
 
-export const RecommendationListItem: FC<RecommendationListItemProps> = memo((props) => {
+export const RecommendationListItem: FC = memo<RecommendationListItemProps>((props) => {
   const { className, film } = props
   return (
     <li className={cn(styles.film_card, className)}>
+      <Link href={`/films/${film.id}`}>
       <div className={styles.image_container}>
-        <Image src={film.cover} alt='film_cover' />
+        <Image src={film.cover} alt='film_cover' width={100} height={100} sizes={'100vw'}/>
       </div>
       <div className={styles.main}>
         <div>
@@ -31,6 +33,7 @@ export const RecommendationListItem: FC<RecommendationListItemProps> = memo((pro
           <h4>+{film.age}</h4>
         </div>
       </div>
+      </Link>
     </li>
   )
 })

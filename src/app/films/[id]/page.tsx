@@ -2,7 +2,7 @@ import { FilmDetailsPage } from '@/pages/filmDetailsPage'
 import { SERVER_URL } from '@/shared/consts'
 import { Film } from '@/entities/Film'
 
-async function getData(id: string): Promise<Film> {
+async function getFilm(id: string): Promise<Film> {
   const res = await fetch(`${SERVER_URL}films/${id}`)
 
   if (!res.ok) {
@@ -12,10 +12,21 @@ async function getData(id: string): Promise<Film> {
   return res.json()
 }
 
+async function getFilmRecommendations(): Promise<Film[]> {
+  const res = await fetch(`${SERVER_URL}films?_start=2&_limit=6`)
+
+  if (!res.ok) {
+    throw new Error('Failed to fetch data')
+  }
+
+  return res.json()
+}
+
 export default async function FilmDetails({ params }) {
-  const data = await getData(params.id)
+  const film = await getFilm(params.id)
+  const recommendations = await getFilmRecommendations()
 
   return (
-    <FilmDetailsPage film={data} />
+    <FilmDetailsPage film={film} recommendations={recommendations} />
   )
 }

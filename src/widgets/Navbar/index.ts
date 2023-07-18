@@ -1,2 +1,2 @@
 export { Navbar } from './ui/Navbar/Navbar'
-export { NavbarLink } from './lib/navbarLinks'
+export type { NavbarLink } from './lib/navbarLinks'

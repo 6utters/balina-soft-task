@@ -8,7 +8,7 @@ interface SearchButtonProps {
     className?: string
 }
 
-export const SearchButton: FC<SearchButtonProps> = memo((props) => {
+export const SearchButton: FC = memo<SearchButtonProps>((props) => {
     const { className } = props
     return (
       <button className={cn(styles.search, className)}>

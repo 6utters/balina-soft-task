@@ -5,7 +5,6 @@ import { SearchButton } from '@/widgets/Search'
 import styles from './Navbar.module.scss'
 
 export const Navbar: FC = () => {
-
   return (
     <div className={styles.wrapper}>
       <nav className={styles.navbar}>
