@@ -7,14 +7,13 @@
 
   .recommendations {
     position: relative;
-    height: 100%;
     max-width: 1180px;
+    width: 82%;
     margin: 0 18px;
 
 
     .title {
-      width: 100%;
-      min-width: 1040px;
+      //max-width: 1040px;
       background: var(--secondary-pale);
       height: 59px;
       border-radius: 6px;
@@ -43,13 +42,15 @@
       }
 
       .recommendations_list {
-        margin: 20px 20px;
+        margin: 20px auto;
+        width: 82%;
       }
     }
 
     @include breakpoint-down(mobile) {
       .recommendations_list {
         margin: 0;
+        width: 100%;
       }
 
       .title {

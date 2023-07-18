@@ -1,13 +1,14 @@
 import { FC } from 'react'
 import { Film } from '@/entities/Film'
 import { FilmRecommendations } from '../FilmRecommendations/FilmRecommendations'
+import FilmInfo from '@/pages/filmDetailsPage/ui/FilmInfo/FilmInfo'
 
 interface FilmDetailsPageProps {
   film: Film
   recommendations: Film[]
 }
 
-export const FilmDetailsPage:FC<FilmDetailsPageProps> = (props) => {
+export const FilmDetailsPage: FC<FilmDetailsPageProps> = (props) => {
   const { film, recommendations } = props
 
   const getFilms = async () => {
@@ -18,6 +19,7 @@ export const FilmDetailsPage:FC<FilmDetailsPageProps> = (props) => {
   return (
     <div>
       {film.title}
+      <FilmInfo film={film} />
       <FilmRecommendations recommendedFilms={recommendations} />
     </div>
   )
