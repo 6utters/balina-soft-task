@@ -6,17 +6,19 @@ import styles from './AppLogo.module.scss'
 import cn from 'classnames'
 
 interface AppLogoProps {
-    className?: string
+  className?: string
 }
 
 export const AppLogo: FC<AppLogoProps> = memo((props) => {
-    const {className} = props
-    return (
-      <Link href="/" className={cn(styles.crown, className)}>
-        <Image
-          src={Crown}
-          alt="crown-icon"
-        />
-      </Link>
-    )
+  const { className } = props
+  return (
+    <Link href='/' className={cn(styles.crown, className)}>
+      <Image
+        src={Crown}
+        alt='crown-icon'
+      />
+    </Link>
+  )
 })
+
+AppLogo.displayName = 'AppLogo'

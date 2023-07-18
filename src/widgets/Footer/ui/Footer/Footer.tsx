@@ -39,3 +39,5 @@ export const Footer: FC = memo(() => {
     </div>
   )
 })
+
+Footer.displayName = 'Footer'

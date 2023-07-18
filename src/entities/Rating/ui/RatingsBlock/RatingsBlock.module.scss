@@ -1,0 +1,44 @@
+.ratings_block {
+  padding: 10px 0;
+  border-radius: 12px;
+  border: 1px solid #695965;
+  display: flex;
+  width: fit-content;
+
+  .block {
+    min-width: 200px;
+    padding: 0 10px;
+    border-right: 1px solid #695965;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    .info {
+      .reviews {
+        color: var(--text-pale);
+      }
+    }
+
+    .rating {
+      h4 {
+        font-size: 20px;
+      }
+    }
+  }
+
+  @include breakpoint-down(tablet) {
+    width: 100%;
+    .block {
+      min-width: 0;
+      width: 100%;
+    }
+  }
+
+  @include breakpoint-down(mobile) {
+    border: none;
+  }
+}

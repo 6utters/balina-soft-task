@@ -1,7 +1,21 @@
-import Link from 'next/link'
+import { FilmsPage } from '@/appPages/FilmsPage'
+import { Film } from '@/entities/Film'
+import { SERVER_URL } from '@/shared/consts'
 
-export default function Home() {
+async function getFilms(): Promise<Film[]> {
+  const res = await fetch(`${SERVER_URL}films`)
+
+  if (!res.ok) {
+    throw new Error('Failed to fetch data')
+  }
+
+  return res.json()
+}
+
+export default async function Home() {
+  const films = await getFilms()
+
   return (
-    <Link href={'/films/1'}>To film</Link>
+    <FilmsPage films={films} />
   )
 }

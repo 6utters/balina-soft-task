@@ -1,0 +1,43 @@
+.info {
+  position: relative;
+  padding: 20px 0;
+  border-bottom: 1px solid #FFFFFF4D;
+
+  .actors {
+    padding-top: 20px;
+  }
+
+  .features {
+    display: flex;
+    gap: 64px;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #FFFFFF4D;
+  }
+
+  @include breakpoint-down(tablet) {
+    border-top: 1px solid #FFFFFF4D;
+    border-bottom: none;
+  }
+
+  @include breakpoint-down(mobile) {
+    width: 100%;
+    border-top: none;
+    padding: 0;
+
+    .features {
+      border-bottom: none;
+      flex-direction: column;
+      gap: 16px;
+      padding: 0;
+    }
+  }
+
+  h5 {
+    margin-bottom: 7px;
+    color: var(--text-pale);
+  }
+
+  h4 {
+    line-height: 22px;
+  }
+}

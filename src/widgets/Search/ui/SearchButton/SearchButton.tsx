@@ -5,14 +5,16 @@ import Search from '@/shared/assets/icons/search.svg'
 import styles from './SearchButton.module.scss'
 
 interface SearchButtonProps {
-    className?: string
+  className?: string
 }
 
-export const SearchButton: FC = memo<SearchButtonProps>((props) => {
-    const { className } = props
-    return (
-      <button className={cn(styles.search, className)}>
-          <Image src={Search} alt="search_icon"/>
-      </button>
-    )
+export const SearchButton: FC<SearchButtonProps> = memo((props) => {
+  const { className } = props
+  return (
+    <button className={cn(styles.search, className)}>
+      <Image src={Search} alt='search_icon' />
+    </button>
+  )
 })
+
+SearchButton.displayName = 'SearchButton'

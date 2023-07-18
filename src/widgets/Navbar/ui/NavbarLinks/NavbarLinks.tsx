@@ -16,7 +16,7 @@ export const NavbarLinks: FC<NavbarLinksProps> = (props) => {
   const pathname = usePathname()
 
   const checkActive = (link: string) => {
-    if (pathname.includes('/films') && link == '/') {
+    if (pathname?.includes('/films') && link == '/') {
       return true
     }
     return link === pathname

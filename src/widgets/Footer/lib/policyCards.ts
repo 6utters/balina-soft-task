@@ -4,11 +4,12 @@ import mastercard from '@/shared/assets/images/cards/mastercard_logo.png'
 import mastercard_secure from '@/shared/assets/images/cards/mastercard_logo_secure_code_logo.png'
 import visa from '@/shared/assets/images/cards/visa_logo.png'
 import webpay from '@/shared/assets/images/cards/webpay_logo.png'
+import { StaticImageData } from 'next/image'
 
 interface PolicyCard {
   id: string
   href: string
-  src: string
+  src: StaticImageData
   alt: string
 }
 

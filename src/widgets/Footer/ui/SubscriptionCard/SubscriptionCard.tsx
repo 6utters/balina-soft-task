@@ -10,8 +10,8 @@ interface SubscriptionCardProps {
   className?: string
 }
 
-export const SubscriptionCard: FC = memo<SubscriptionCardProps>((props) => {
-  const { className, onClose } = props
+export const SubscriptionCard: FC<SubscriptionCardProps> = memo((props) => {
+  const { className } = props
   const [isVisible, setIsVisible] = useState(true)
 
   const close = () => {
@@ -37,3 +37,5 @@ export const SubscriptionCard: FC = memo<SubscriptionCardProps>((props) => {
     </div>
   )
 })
+
+SubscriptionCard.displayName = 'SubscriptionCard'

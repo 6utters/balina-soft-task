@@ -1,0 +1,51 @@
+.recommendations {
+  position: relative;
+  margin-bottom: 72px;
+
+  .title {
+    background: var(--secondary-pale);
+    height: 59px;
+    border-radius: 6px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 25px;
+    }
+  }
+
+  .recommendations_list {
+    margin: 20px 0;
+  }
+
+  @include breakpoint-down(tablet) {
+    width: 100%;
+    margin: 0;
+    .title {
+      min-width: 100%;
+      border-radius: 0;
+    }
+
+    .recommendations_list {
+      margin: 20px auto;
+    }
+  }
+
+  @include breakpoint-down(mobile) {
+    .recommendations_list {
+      margin: 0;
+      width: 100%;
+    }
+
+    .title {
+      background: transparent;
+      text-align: start;
+      padding: 0;
+    }
+  }
+}
+

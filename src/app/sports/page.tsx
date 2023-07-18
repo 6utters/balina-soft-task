@@ -1,5 +1,5 @@
 export default function Sports() {
   return (
-    <div>Sports</div>
+    <h1>Sports page is coming soon...</h1>
   )
 }

@@ -1,1 +1,1 @@
-export { Film } from './types/film'
+export type { Film } from './types/film'

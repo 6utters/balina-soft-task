@@ -23,3 +23,5 @@ export const Policy: FC = memo(() => {
     </div>
   )
 })
+
+Policy.displayName = 'Policy'

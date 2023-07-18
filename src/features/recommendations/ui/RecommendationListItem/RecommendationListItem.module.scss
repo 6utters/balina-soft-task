@@ -44,21 +44,11 @@
       display: flex;
       gap: 12px;
       color: var(--text-pale);
-
-      .rating {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-
-        img {
-          height: 100%;
-        }
-      }
     }
   }
 
   @include breakpoint-down(mobile) {
-    padding: 0 16px;
+    padding: 0;
     a {
       padding: 0 0 22px 0;
       width: 100%;

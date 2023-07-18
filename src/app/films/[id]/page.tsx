@@ -1,4 +1,4 @@
-import { FilmDetailsPage } from '@/pages/filmDetailsPage'
+import { FilmDetailsPage } from '@/appPages/filmDetailsPage'
 import { SERVER_URL } from '@/shared/consts'
 import { Film } from '@/entities/Film'
 
@@ -22,7 +22,7 @@ async function getFilmRecommendations(): Promise<Film[]> {
   return res.json()
 }
 
-export default async function FilmDetails({ params }) {
+export default async function FilmDetails({ params }: { params: { id: string } }) {
   const film = await getFilm(params.id)
   const recommendations = await getFilmRecommendations()
 

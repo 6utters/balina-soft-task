@@ -1,0 +1,12 @@
+.features {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 24px;
+
+  .block {
+    border-radius: 4px;
+    padding: 4px 8px;
+    background: #00000080;
+  }
+}

@@ -3,11 +3,11 @@
 import { FC, useState } from 'react'
 import Image from 'next/image'
 import Arrow from '@/shared/assets/icons/arrow.svg'
-import styles from './ReadMore.module.scss'
 import cn from 'classnames'
+import styles from './ReadMore.module.scss'
 
 interface ReadMoreProps {
-  children: Text,
+  children: string,
   maxChars: number
 }
 
@@ -15,7 +15,7 @@ const ReadMore: FC<ReadMoreProps> = (props) => {
   const { children, maxChars = 150 } = props
   const [toggled, setToggled] = useState(true)
 
-  const text = children as string
+  const text = children
 
   const result = toggled ? `${text.slice(0, maxChars)}...` : text
 

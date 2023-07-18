@@ -1,0 +1,36 @@
+.description {
+  position: relative;
+  padding: 16px 0;
+  width: 100%;
+
+  h2 {
+    margin-bottom: 14px;
+  }
+
+  .images {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 32px;
+
+    img {
+      border-radius: 16px;
+      height: 106px;
+      width: 188px;
+      object-fit: contain;
+    }
+  }
+
+  @include breakpoint-down(mobile) {
+    padding: 0;
+    width: 100%;
+
+    .images {
+      margin-bottom: 12px;
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}
+

@@ -1,6 +1,18 @@
 .main_layout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .content {
-    min-height: 100vh;
+    min-height: 70vh;
+    max-width: 1180px;
+    width: 82%;
+    margin: 0 18px;
+
+    @include breakpoint-down(mobile) {
+      padding: 0 18px;
+      width: 100%;
+    }
   }
 }
