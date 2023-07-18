@@ -2,6 +2,7 @@ import { FC } from 'react'
 import { Film } from '@/entities/Film'
 import { FilmRecommendations } from '../FilmRecommendations/FilmRecommendations'
 import FilmInfo from '@/pages/filmDetailsPage/ui/FilmInfo/FilmInfo'
+import FilmDescription from '@/pages/filmDetailsPage/ui/FilmDescription/FilmDescription'
 
 interface FilmDetailsPageProps {
   film: Film
@@ -19,6 +20,7 @@ export const FilmDetailsPage: FC<FilmDetailsPageProps> = (props) => {
   return (
     <div>
       {film.title}
+      <FilmDescription film={film} />
       <FilmInfo film={film} />
       <FilmRecommendations recommendedFilms={recommendations} />
     </div>

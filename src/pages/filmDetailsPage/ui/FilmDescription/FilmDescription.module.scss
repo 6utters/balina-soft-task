@@ -1,0 +1,44 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  h2 {
+    margin: 16px 0;
+  }
+
+  .description {
+    position: relative;
+    max-width: 1180px;
+    width: 82%;
+    margin: 0 18px;
+
+    .images {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 32px;
+
+      img {
+        border-radius: 16px;
+        height: 106px;
+        width: 188px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  @include breakpoint-down(mobile) {
+    .description {
+      padding: 0 18px;
+      width: 100%;
+
+      .images {
+        margin-bottom: 12px;
+
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+}
